@@ -15,4 +15,10 @@ FactoryGirl.define do
     :taxonomy1
     parent_id nil
   end
+
+  factory :entry1_2, class: Spree::Taxon do
+    name 'Entry 1 2'
+    :taxonomy1
+    parent_id nil
+  end
 end
