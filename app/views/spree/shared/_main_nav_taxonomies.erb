@@ -1,0 +1,16 @@
+<% if @taxonomies %>
+<% @taxonomies.each do |taxonomy| %> 
+<li>
+  <ul class="dropdown_menu">
+	 <li>
+		<%= taxonomy.name %>
+		<ul>
+		  <% taxonomy.root.children.each do |taxon| %> 
+		  <li><a href="/t/<%= taxon.permalink  %>"><%= taxon.name %></a></li>
+		  <% end  %> 
+		</ul>
+	 </li>
+  </ul>
+</li>
+<% end  %> 
+<% end  %> 
