@@ -21,14 +21,13 @@ ul.dropdown_menu a {
 }
 
 ul.dropdown_menu li {
-	float: left;
-	width: 10em;
+	 padding: 0px 10px 0px 10px; 
 }
 
 ul.dropdown_menu li ul {
-	position: absolute;
-	width: 10em;
-	left: -999em;
+	 position: absolute;
+	 width: 10em;
+	 left: -999em;
 }
 
 ul.dropdown_menu li:hover ul {
