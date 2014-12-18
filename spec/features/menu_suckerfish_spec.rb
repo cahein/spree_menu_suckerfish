@@ -4,8 +4,8 @@ describe 'add taxonomy to main nav bar' do
 
   it 'should insert list items after #home-link' do
     create(:taxonomy1)
-    create(:entry1_1)
     create(:taxonomy2)
+    create(:entry1_1)
 
     visit '/'
     page.should have_content("Entry 1 1")

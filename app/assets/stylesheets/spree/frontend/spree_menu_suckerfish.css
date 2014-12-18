@@ -26,8 +26,9 @@ ul.dropdown_menu li {
 
 ul.dropdown_menu li ul {
 	 position: absolute;
-	 width: 10em;
+	 width: 6em;
 	 left: -999em;
+	 z-index: 999;
 }
 
 ul.dropdown_menu li:hover ul {

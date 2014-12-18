@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_menu_suckerfish'
-  s.version     = '2.2.2'
+  s.version     = '0.2.0'
   s.summary     = 'Add taxonomies to the main nav bar, inserted after the home-link'
   s.description = 'All taxonomies are shown with their root children as drop-down list. Only one level. This extension uses css known as suckerfish.'
   s.required_ruby_version = '>= 1.9.3'
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 2.2.2'
+  s.add_dependency 'spree_core', '~> 2.2.0'
 
   s.add_development_dependency 'capybara', '~> 2.1'
   s.add_development_dependency 'coffee-rails'
