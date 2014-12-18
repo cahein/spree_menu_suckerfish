@@ -14,6 +14,5 @@ describe 'add taxonomy to main nav bar' do
       page.should have_content("Taxonomy 1")
       page.should have_content("Taxonomy 2")
     end
-
   end
 end

@@ -1,16 +1,3 @@
-# Run Coverage report
-# require 'simplecov'
-# SimpleCov.start do
-#   add_filter 'spec/dummy'
-#   add_group 'Controllers', 'app/controllers'
-#   add_group 'Helpers', 'app/helpers'
-#   add_group 'Mailers', 'app/mailers'
-#   add_group 'Models', 'app/models'
-#   add_group 'Views', 'app/views'
-#   add_group 'Libraries', 'lib'
-# end
-
-
 # Configure Rails Environment
 ENV['RAILS_ENV'] = 'test'
 
@@ -25,9 +12,10 @@ require 'ffaker'
 Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
 
 # Requires factories defined in spree_core
-require 'spree/testing_support/factories'
-require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/authorization_helpers'
+require 'spree/testing_support/capybara_ext'
+require 'spree/testing_support/controller_requests'
+require 'spree/testing_support/factories'
 require 'spree/testing_support/url_helpers'
 
 # Requires factories defined in lib/spree_menu_suckerfish/factories.rb
@@ -42,6 +30,7 @@ RSpec.configure do |config|
   # visit spree.admin_path
   # current_path.should eql(spree.products_path)
   config.include Spree::TestingSupport::UrlHelpers
+  config.include Capybara::DSL
 
   # == Mock Framework
   #
