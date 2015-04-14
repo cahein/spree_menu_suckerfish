@@ -15,6 +15,9 @@ ul.dropdown_menu ul li a {
 	 width: 300px;
 	 text-transform: none;
 }
+ul.dropdown_menu ul li.current a {
+	 color: #000;
+}
 ul.dropdown_menu a {
 	display: block;
 	width: 10em;

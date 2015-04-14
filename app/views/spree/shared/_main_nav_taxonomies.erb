@@ -1,12 +1,19 @@
 <% if @taxonomies %>
+<% current = request.fullpath.downcase %>
 <% @taxonomies.each do |taxonomy| %> 
 <li>
   <ul class="dropdown_menu">
 	 <li>
 		<%= taxonomy.name %>
 		<ul>
-		  <% taxonomy.root.children.each do |taxon| %> 
-		  <li><a href="/t/<%= taxon.permalink  %>"><%= taxon.name %></a></li>
+		  <% taxonomy.root.children.each do |taxon| %>
+		  <li
+		  <% if current[3..-1] == taxon.permalink %>
+		   class="current"
+		  <% end %>
+		  >
+		  
+		  <a href="/t/<%= taxon.permalink  %>"><%= taxon.name %></a></li>
 		  <% end  %> 
 		</ul>
 	 </li>
