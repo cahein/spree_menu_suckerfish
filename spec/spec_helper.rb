@@ -22,6 +22,8 @@ require 'spree/testing_support/url_helpers'
 require 'spree_menu_suckerfish/factories'
 
 RSpec.configure do |config|
+  config.expect_with(:rspec) { |c| c.syntax = :should }
+
   config.include FactoryGirl::Syntax::Methods
   # == URL Helpers
   #
