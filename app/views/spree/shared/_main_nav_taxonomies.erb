@@ -1,3 +1,4 @@
+<% current = request.fullpath %>
 <% if @taxonomies %>
 <% @taxonomies.each do |taxonomy| %> 
 <li>
@@ -5,8 +6,10 @@
 	 <li>
 		<%= taxonomy.name %>
 		<ul>
-		  <% taxonomy.root.children.each do |taxon| %> 
-		  <li><a href="/t/<%= taxon.permalink  %>"><%= taxon.name %></a></li>
+		  <% taxonomy.root.children.each do |taxon| %>
+		  <li
+		  <% if "/t/" + taxon.permalink == current.downcase %> class="active"<% end %>
+		  ><a href="/t/<%= taxon.permalink  %>"><%= taxon.name %></a></li>
 		  <% end  %> 
 		</ul>
 	 </li>

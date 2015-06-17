@@ -6,7 +6,7 @@ ul.dropdown_menu, ul.dropdown_menu ul {
 	line-height: 1;
 }
 ul.dropdown_menu ul li {
-	 width: 300px;
+	 width: 240px;
 	 padding: 4px 0px 0px 10px; 
 	 background-color: #e0e0e0;
 	 border-style: dotted; border-color: black; border-width: 0px 0px 1px 0px; 
@@ -20,10 +20,17 @@ ul.dropdown_menu a {
 	width: 10em;
 }
 
+ul.dropdown_menu li.active { background-color: #fff; }
 ul.dropdown_menu li {
-	 padding: 0px 10px 0px 10px; 
+	 padding: 0 10px 0 10px;
 }
-
+ul.dropdown_menu > li {
+	 padding: 8px 10px 8px 10px;
+	 margin: -6px 0 -6px 0; 
+}
+ul.dropdown_menu li:hover {
+	 background-color: #fff;
+}
 ul.dropdown_menu li ul {
 	 position: absolute;
 	 width: 6em;
