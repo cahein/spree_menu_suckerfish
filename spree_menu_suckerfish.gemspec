@@ -26,6 +26,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'sass-rails', '~> 5.0.0'
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'sqlite3'
-  s.add_development_dependency "bootsnap", "~> 1.3"
-  s.add_development_dependency "listen", "~> 3.0"
+  s.add_development_dependency "bootsnap", '~> 1.3.0'
+  s.add_development_dependency "listen", '~> 3.1.0'
 end
