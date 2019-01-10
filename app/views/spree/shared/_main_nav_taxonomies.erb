@@ -1,23 +1,31 @@
 <% if @taxonomies %>
-<% current = request.fullpath.downcase %>
-<% @taxonomies.each do |taxonomy| %> 
-<li>
-  <ul class="dropdown_menu">
-	 <li>
-		<%= taxonomy.name %>
-		<ul>
-		  <% taxonomy.root.children.each do |taxon| %>
-		  <li
-		  <% if current[3..-1] == taxon.permalink %>
-		   class="current"
-		  <% end %>
-		  >
-		  
-		  <a href="/t/<%= taxon.permalink  %>"><%= taxon.name %></a></li>
-		  <% end  %> 
-		</ul>
-	 </li>
-  </ul>
-</li>
-<% end  %> 
+  <% current_uri = request.env['PATH_INFO'] %>
+
+  <% @taxonomies.each do |taxonomy| %> 
+    <% taxonomyClass = nil %>
+    <% taxonomy.root.children.each do |taxon| %>
+      <% if current_uri == "/t/#{taxon.permalink}" %>
+        <% taxonomyClass = 'class=active' %>
+      <% end %>
+    <% end %>
+    <li>
+      <ul class="dropdown_menu">
+	<li <%= taxonomyClass %>">
+	  <%= taxonomy.name %>
+	  <ul>
+	    <% taxonomy.root.children.each do |taxon| %>
+              <% classAttr = nil %>
+              <% if current_uri == "/t/#{taxon.permalink}" %>
+                <% classAttr = 'class=active' %>
+              <% end %>
+              <li <%= classAttr %>">
+                <a href="/t/<%= taxon.permalink  %>"><%= taxon.name %></a>
+              </li>
+	    <% end  %> 
+	  </ul>
+	</li>
+      </ul>
+    </li>
+  <% end  %> 
+>>>>>>> 3-1-stable
 <% end  %> 
