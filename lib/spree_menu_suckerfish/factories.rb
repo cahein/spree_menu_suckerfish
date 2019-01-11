@@ -1,7 +1,4 @@
 FactoryBot.define do
-  factory :spreetaxonomy, class: Spree::Taxonomy do
-  end
-
-  factory :spreetaxon, class: Spree::Taxon do
-  end
+  factory :staxonomy, class: Spree::Taxonomy
+  factory :staxon, class: Spree::Taxon
 end

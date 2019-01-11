@@ -13,10 +13,8 @@ ul.dropdown_menu ul li {
 }
 ul.dropdown_menu ul li a {
     width: 100%;
+    height: 20px;
     text-transform: none;
-}
-ul.dropdown_menu ul li.current a {
-	 color: #000;
 }
 ul.dropdown_menu a {
     display: block;
@@ -41,12 +39,22 @@ ul.dropdown_menu li:hover ul {
 ul.dropdown_menu li ul ul {
     margin: -1em 0 0 10em;
 }
-ul.dropdown_menu li:hover ul ul, ul.dropdown_menu ul.sfhover ul ul {
+ul.dropdown_menu li:hover ul ul,
+ul.dropdown_menu ul.sfhover ul ul {
     left: -999em;
 }
-ul.dropdown_menu li:hover ul, ul.dropdown_menu li li:hover ul, ul.dropdown_menu ul.sfhover ul, ul.dropdown_menu li ul.sfhover ul {
+ul.dropdown_menu li:hover ul,
+ul.dropdown_menu li li:hover ul,
+ul.dropdown_menu ul.sfhover ul,
+ul.dropdown_menu li ul.sfhover ul {
     left: auto;
 }
 
-ul.dropdown_menu > li.active { border: 1px solid #fff; }
-ul.dropdown_menu ul > li.active { background-color: #116623; }
+ul.dropdown_menu > li { color: #fff; }
+ul.dropdown_menu > li.active { font-weight: bold; }
+
+#spree-header ul.dropdown_menu li a { color: #000; font-weight: normal; }
+#spree-header ul.dropdown_menu ul li:hover { background-color: #7f7f7f; }
+#spree-header ul.dropdown_menu ul li a:hover { background-color: transparent; }
+#spree-header ul.dropdown_menu ul li.active a:hover { text-decoration: none; }
+#spree-header ul.dropdown_menu ul > li.active a { color: #116623; font-weight: bold; }
