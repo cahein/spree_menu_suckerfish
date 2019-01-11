@@ -24,7 +24,7 @@ require 'spree_menu_suckerfish/factories'
 RSpec.configure do |config|
   config.expect_with(:rspec) { |c| c.syntax = :should }
 
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
   # == URL Helpers
   #
   # Allows access to Spree's routes in specs:
